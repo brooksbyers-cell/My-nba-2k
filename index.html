@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA 2K-Style JS | Three.js Basketball</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="loading-screen">
+      <div class="loader-content">
+        <h1>BASKETBALL <span>2K26</span></h1>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p>Loading Arena and Assets...</p>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div class="scoreboard">
+        <div class="team home">
+          <span class="abbr" id="home-abbr">LAL</span>
+          <span class="score" id="home-score">0</span>
+        </div>
+        <div class="game-meta">
+          <div id="game-clock">12:00</div>
+          <div id="quarter">1ST QTR</div>
+        </div>
+        <div class="team away">
+          <span class="score" id="away-score">0</span>
+          <span class="abbr" id="away-abbr">BOS</span>
+        </div>
+      </div>
+
+      <div id="shot-clock-container">
+        <div id="shot-clock-digit">24</div>
+      </div>
+
+      <div id="shot-meter" class="hidden">
+        <div class="meter-track">
+          <div class="meter-perfect-zone"></div>
+          <div id="meter-fill"></div>
+          <div id="meter-indicator"></div>
+        </div>
+      </div>
+
+      <div class="player-status">
+        <div class="stamina-label">STAMINA</div>
+        <div class="stamina-bar">
+          <div id="stamina-fill"></div>
+        </div>
+        <div id="controlled-player-name">LEBRON JAMES</div>
+      </div>
+
+      <div class="controls-hint">
+        <p><kbd>WASD</kbd> Move | <kbd>SHIFT</kbd> Sprint</p>
+        <p><kbd>SPACE</kbd> (Hold) Shoot / (Tap) Block</p>
+        <p><kbd>E</kbd> Pass | <kbd>Q</kbd> Alley-oop</p>
+      </div>
+    </div>
+
+    <div id="pause-menu" class="hidden">
+      <div class="menu-card">
+        <h2>PAUSED</h2>
+        <button id="resume-btn" class="menu-btn">RESUME</button>
+        <button id="settings-btn" class="menu-btn">SETTINGS</button>
+        <button id="quit-btn" class="menu-btn">QUIT TO MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
